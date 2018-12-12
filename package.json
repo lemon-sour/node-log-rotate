@@ -1,0 +1,22 @@
+{
+  "name": "node-log-rotate",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "node-log-rotate": "bin/node-log-rotate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lemon-sour/node-log-rotate.git"
+  },
+  "author": "hisasann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lemon-sour/node-log-rotate/issues"
+  },
+  "homepage": "https://github.com/lemon-sour/node-log-rotate#readme"
+}

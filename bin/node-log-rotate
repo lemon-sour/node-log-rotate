@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const path = __dirname + '/../main';
+const main = require(path);
