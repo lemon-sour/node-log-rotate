@@ -4,10 +4,41 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "npm run build && node -r esm ./lib/main.js",
+    "test": "jest",
+    "test:coverage": "jest --no-cache --forceExit --coverage",
+    "tsc:init": "tsc --init",
+    "lint": "prettier --list-different \"{src,__tests__}/**/*.{js,ts,tsx,json}\"",
+    "lint:format": "prettier --write \"{src,__tests__}/**/*.{js,ts,tsx,json}\"",
+    "lint-staged": "lint-staged"
   },
-  "bin": {
-    "node-log-rotate": "bin/node-log-rotate"
+  "lint-staged": {
+    "linters": {
+      "{src,__tests__}/**/*.{js,ts,tsx,json}": [
+        "npm run lint:format",
+        "git add"
+      ]
+    }
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ]
   },
   "repository": {
     "type": "git",
@@ -18,5 +49,19 @@
   "bugs": {
     "url": "https://github.com/lemon-sour/node-log-rotate/issues"
   },
-  "homepage": "https://github.com/lemon-sour/node-log-rotate#readme"
+  "homepage": "https://github.com/lemon-sour/node-log-rotate#readme",
+  "dependencies": {
+    "lint-staged": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "@types/node": "^10.12.18",
+    "esm": "^3.0.84",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.15.3",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
+  }
 }

@@ -1,0 +1,4 @@
+# .prettierrc.toml
+trailingComma = "all"
+semi = true
+singleQuote = true
