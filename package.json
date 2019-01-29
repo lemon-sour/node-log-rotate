@@ -2,10 +2,10 @@
   "name": "node-log-rotate",
   "version": "0.0.1",
   "description": "",
-  "main": "main.js",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "tsc",
-    "dev": "npm run build && node -r esm ./lib/main.js",
+    "build": "rimraf lib/* && tsc",
+    "dev": "npm run build && node -r esm ./lib/index.js",
     "test": "jest",
     "test:coverage": "jest --no-cache --forceExit --coverage",
     "tsc:init": "tsc --init",
@@ -51,10 +51,14 @@
   },
   "homepage": "https://github.com/lemon-sour/node-log-rotate#readme",
   "dependencies": {
-    "lint-staged": "^8.1.0"
+    "lint-staged": "^8.1.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "@types/jest": "^23.3.12",
+    "@types/lodash": "^4.14.120",
+    "@types/moment": "^2.13.0",
     "@types/node": "^10.12.18",
     "esm": "^3.0.84",
     "jest": "^23.6.0",
