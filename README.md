@@ -1,7 +1,10 @@
 :lipstick: node-log-rotate :lipstick:
 ===============
 
-[![npm version](https://badge.fury.io/js/node-log-rotate.svg)](https://badge.fury.io/js/node-log-rotate)
+  <a href="https://www.npmjs.com/package/node-log-rotate"><img src="https://badgen.net/npm/dm/node-log-rotate" alt="Downloads"></a>
+  <a href="https://www.npmjs.com/package/node-log-rotate"><img src="https://badgen.net/npm/v/node-log-rotate" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/node-log-rotate"><img src="https://badgen.net/npm/license/node-log-rotate" alt="License"></a>
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
 
 
 ## Description
