@@ -10,9 +10,8 @@ inspire:
 
 [megahertz/electron-log: Just a very simple logging module for your Electron application](https://github.com/megahertz/electron-log)
 
-Just a very simple logging module for your Electron application.
+Just a very simple logging module for your node.js application.
 No dependencies. No complicated configuration. Just require and use.
-Also it can be used without Electron.
 
 By default it writes logs to the following locations:
 
