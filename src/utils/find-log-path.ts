@@ -1,24 +1,25 @@
 import * as fs from 'fs';
 
-export default function (appName = '') {
+export default function(appName = '') {
   let dir: string = '';
   switch (process.platform) {
     case 'linux':
       dir = prepareDir(process.env['XDG_CONFIG_HOME'] + '', appName)
         .or(process.env['HOME'] + '/.config', appName)
         .or(process.env['XDG_DATA_HOME'] + '', appName)
-        .or(process.env['HOME'] + '/.local/share', appName)
-        .result;
+        .or(process.env['HOME'] + '/.local/share', appName).result;
       break;
     case 'darwin':
-      dir = prepareDir(process.env['HOME'] + '/Library/Logs', appName)
-        .or(process.env['HOME'] + '/Library/Application Support', appName)
-        .result;
+      dir = prepareDir(process.env['HOME'] + '/Library/Logs', appName).or(
+        process.env['HOME'] + '/Library/Application Support',
+        appName,
+      ).result;
       break;
     case 'win32':
-      dir = prepareDir(process.env['APPDATA'] + '', appName)
-        .or(process.env['HOME'] + '/AppData', appName)
-        .result;
+      dir = prepareDir(process.env['APPDATA'] + '', appName).or(
+        process.env['HOME'] + '/AppData',
+        appName,
+      ).result;
       break;
     default:
       break;
@@ -27,7 +28,7 @@ export default function (appName = '') {
   return [dir, '/'].join('');
 }
 
-function prepareDir(this: any,  path: string, appName: string) {
+function prepareDir(this: any, path: string, appName: string) {
   if (!this || this.or !== prepareDir || !this.result) {
     if (!path) {
       return { or: prepareDir };
@@ -43,7 +44,7 @@ function prepareDir(this: any,  path: string, appName: string) {
 
   return {
     or: prepareDir,
-    result: (this ? this.result : false) || path
+    result: (this ? this.result : false) || path,
   };
 }
 

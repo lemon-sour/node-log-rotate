@@ -6,7 +6,7 @@ describe('index', () => {
 
     setup({
       appName: pkg.name + '-test',
-      maxSize: 10 * 1024 * 1024
+      maxSize: 10 * 1024 * 1024,
     });
 
     const r = log('test ES');
@@ -22,7 +22,7 @@ describe('index', () => {
     const logCJS = require('../src/index');
     logCJS.setup({
       appName: pkg.name + '-test',
-      maxSize: 10 * 1024 * 1024
+      maxSize: 10 * 1024 * 1024,
     });
 
     const r = logCJS.log('test CJS');

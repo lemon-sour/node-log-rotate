@@ -6,7 +6,7 @@ import findLogPath from './utils/find-log-path';
 
 const format: string = 'YYYY-MM-DD';
 
-export default function (howManyDaysAgo: number, appName: string) {
+export default function(howManyDaysAgo: number, appName: string) {
   const path: string = findLogPath(appName);
   let files: string[] = [];
   try {
@@ -38,13 +38,18 @@ function getYearMonthDay(file: string) {
   return {
     year: split[0],
     month: split[1],
-    day: _.split(split[2], '_', 1)[0]
+    day: _.split(split[2], '_', 1)[0],
   } as YearMonthDayInterface;
 }
 
 function isBefore(howManyDaysAgo: number, yearMonthDay: YearMonthDayInterface) {
-  const agoDays = moment(moment().format(format)).subtract(howManyDaysAgo, 'days');
-  const fileDays = moment([yearMonthDay.year, yearMonthDay.month, yearMonthDay.day].join('-'));
+  const agoDays = moment(moment().format(format)).subtract(
+    howManyDaysAgo,
+    'days',
+  );
+  const fileDays = moment(
+    [yearMonthDay.year, yearMonthDay.month, yearMonthDay.day].join('-'),
+  );
   return moment(fileDays).isBefore(agoDays);
 }
 

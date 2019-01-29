@@ -8,7 +8,11 @@ let file: string | undefined;
 let stream: any;
 let date: string;
 
-export default function (msg: string, appName: string, maxSize: number): boolean {
+export default function(
+  msg: string,
+  appName: string,
+  maxSize: number,
+): boolean {
   const text = msg;
 
   date = dateDetermination(date);
