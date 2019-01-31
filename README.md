@@ -38,12 +38,22 @@ or
 
 ## Usage
 
+### Basic usage
+
+Name of the directory get from `process.env.npm_package_name`.
+
+ ```js
+ import { log } from 'node-log-rotate';
+
+ log('Hello, log');
+ ```
+
 ### ES2015
  
  ```js
  import { setup, log } from 'node-log-rotate';
  setup({
-   appName: 'project-name',  // require for directory name
+   appName: 'project-name',  // If you want to specify the project name, you can specify it.
    maxSize: 10 * 1024 * 1024
  });
 
@@ -55,7 +65,7 @@ or
  ```js
  var log = require('node-log-rotate');
  log.setup({
-   appName: 'project-name',  // require for directory name
+   appName: 'project-name',
    maxSize: 10 * 1024 * 1024
  });
 
