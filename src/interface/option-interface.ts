@@ -1,4 +1,4 @@
 export interface OptionInterface {
-  appName: string;
-  maxSize: number;
+  appName?: string;
+  maxSize?: number;
 }
