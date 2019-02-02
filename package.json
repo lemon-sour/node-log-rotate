@@ -3,6 +3,7 @@
   "version": "0.0.5",
   "description": "",
   "main": "lib/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "build": "rimraf lib/* && tsc",
     "dev": "npm run build && node -r esm ./lib/index.js",
