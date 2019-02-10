@@ -65,7 +65,7 @@ Name of the directory get from `process.env.npm_package_name`.
  ```js
  var log = require('node-log-rotate');
  log.setup({
-   appName: 'project-name',
+   appName: 'project-name',   // If you want to specify the project name, you can specify it.
    maxSize: 10 * 1024 * 1024
  });
 
@@ -80,7 +80,7 @@ For this sample, log files before 10 days ago will be deleted.
  ```js
  import { setup, deleteLog } from 'node-log-rotate';
  setup({
-   appName: 'project-name'  // require for directory name
+   appName: 'project-name'  // If you want to specify the project name, you can specify it.
  });
 
  deleteLog(10);
