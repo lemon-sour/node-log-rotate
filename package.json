@@ -53,6 +53,11 @@
     "type": "git",
     "url": "git+https://github.com/lemon-sour/node-log-rotate.git"
   },
+  "keywords": [
+    "nodejs",
+    "logger",
+    "log-rotate"
+  ],
   "author": "hisasann",
   "license": "MIT",
   "bugs": {
