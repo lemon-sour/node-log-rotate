@@ -46,7 +46,7 @@
   },
   "homepage": "https://github.com/lemon-sour/node-log-rotate#readme",
   "dependencies": {
-    "lint-staged": "^8.1.5",
+    "lint-staged": "^9.0.0",
     "lodash": "^4.17.11",
     "moment": "^2.24.0"
   },
