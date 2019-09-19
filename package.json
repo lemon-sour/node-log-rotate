@@ -46,21 +46,21 @@
   },
   "homepage": "https://github.com/lemon-sour/node-log-rotate#readme",
   "dependencies": {
-    "lint-staged": "^8.1.5",
-    "lodash": "^4.17.11",
+    "lint-staged": "^9.2.5",
+    "lodash": "^4.17.15",
     "moment": "^2.24.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.11",
-    "@types/lodash": "^4.14.122",
+    "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.138",
     "@types/moment": "^2.13.0",
-    "@types/node": "^11.11.0",
-    "esm": "^3.2.14",
-    "jest": "^24.3.1",
-    "nodemon": "^1.18.10",
-    "prettier": "^1.16.4",
-    "rimraf": "^2.6.3",
-    "ts-jest": "^24.0.0",
-    "typescript": "^3.3.3333"
+    "@types/node": "^12.7.5",
+    "esm": "^3.2.25",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.2",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
   }
 }
