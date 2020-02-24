@@ -86,11 +86,11 @@ For this sample, log files before 10 days ago will be deleted.
  deleteLog(10);
  ```
 
+## Author
 
-## Maintainers
-
- - [hisasann](https://github.com/hisasann)
+- [github/hisasann](https://github.com/hisasann)
+- [twitter/hisasann](https://twitter.com/hisasann)
 
 ## License
 
- MIT © [hisasann](https://github.com/hisasann)
+MIT © [hisasann (Yoshiyuki Hisamatsu)](https://github.com/hisasann)
