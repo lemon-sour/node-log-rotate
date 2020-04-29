@@ -8,7 +8,7 @@ let file: string | undefined
 let stream: any
 let date: string
 
-export default function(
+export default function (
   msg: string,
   appName: string,
   maxSize: number

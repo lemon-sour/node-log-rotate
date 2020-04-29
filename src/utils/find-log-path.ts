@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 
-export default function(appName = '') {
+export default function (appName = '') {
   let dir: string = ''
   switch (process.platform) {
     case 'linux':
@@ -44,7 +44,7 @@ function prepareDir(this: any, path: string, appName: string) {
 
   return {
     or: prepareDir,
-    result: (this ? this.result : false) || path
+    result: (this ? this.result : false) || path,
   }
 }
 
