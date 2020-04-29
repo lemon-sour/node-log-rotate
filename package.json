@@ -1,6 +1,6 @@
 {
   "name": "node-log-rotate",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
@@ -12,7 +12,8 @@
     "tsc:init": "tsc --init",
     "lint": "prettier --list-different \"{src,__tests__}/**/*.{js,ts,tsx,json}\"",
     "lint:format": "prettier --write \"{src,__tests__}/**/*.{js,ts,tsx,json}\"",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "release": "standard-version && git push --follow-tags && npm publish"
   },
   "lint-staged": {
     "linters": {
@@ -60,6 +61,7 @@
     "nodemon": "^2.0.2",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.1",
+    "standard-version": "^7.1.0",
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.5"
   }
