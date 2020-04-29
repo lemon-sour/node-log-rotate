@@ -8,6 +8,9 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:12.16
+    environment:
+      TZ: /usr/share/zoneinfo/Asia/Tokyo # add time zone
+      CACHE_VERSION: 1.30
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
