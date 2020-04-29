@@ -8,9 +8,6 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:12.16
-    environment:
-      TZ: /usr/share/zoneinfo/Asia/Tokyo # add time zone
-      CACHE_VERSION: 1.30
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
@@ -25,16 +22,16 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - v{{ .Environment.CACHE_VERSION }}-dependencies-{{ checksum "package.json" }}
+          - v{{ .Branch }}-dependencies-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
-          - v{{ .Environment.CACHE_VERSION }}-dependencies-
+          - v{{ .Branch }}-dependencies-
 
       - run: yarn install
 
       - save_cache:
           paths:
             - node_modules
-          key: v{{ .Environment.CACHE_VERSION }}-dependencies-{{ checksum "package.json" }}
+          key: v{{ .Branch }}-dependencies-{{ checksum "package.json" }}
 
       # run tests!
       - run: yarn test
