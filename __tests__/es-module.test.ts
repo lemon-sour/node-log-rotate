@@ -1,16 +1,16 @@
-import { log, setup, deleteLog } from '../src/index'
+import { log, setup, deleteLog } from '../src/index';
 
 describe('index', () => {
   test('test ES module', () => {
-    const pkg = require('../package.json')
+    const pkg = require('../package.json');
 
     setup({
       appName: pkg.name + '-test',
       maxSize: 10 * 1024 * 1024,
-    })
+    });
 
-    const r = log('test ES')
+    const r = log('test ES');
 
-    expect(r).toEqual(true)
-  })
-})
+    expect(r).toEqual(true);
+  });
+});

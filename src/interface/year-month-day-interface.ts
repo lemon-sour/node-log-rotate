@@ -1,5 +1,5 @@
 export interface YearMonthDayInterface {
-  year: string
-  month: string
-  day: string
+  year: string;
+  month: string;
+  day: string;
 }
