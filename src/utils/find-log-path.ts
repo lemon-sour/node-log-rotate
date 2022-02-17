@@ -4,9 +4,9 @@ export default function (appName = '') {
   let dir: string = '';
   switch (process.platform) {
     case 'linux':
-      dir = prepareDir(process.env['XDG_CONFIG_HOME'] + '', appName)
+      dir = prepareDir(process.env['XDG_CONFIG_HOME'], appName)
         .or(process.env['HOME'] + '/.config', appName)
-        .or(process.env['XDG_DATA_HOME'] + '', appName)
+        .or(process.env['XDG_DATA_HOME'], appName)
         .or(process.env['HOME'] + '/.local/share', appName).result;
       break;
     case 'darwin':
