@@ -60,7 +60,7 @@
     "jest": "^26.0.0",
     "nodemon": "^2.0.3",
     "prettier": "^2.0.5",
-    "rimraf": "^3.0.2",
+    "rimraf": "^5.0.8",
     "standard-version": "^7.1.0",
     "ts-jest": "^25.4.0",
     "typescript": "^3.8.3"
